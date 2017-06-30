@@ -40,27 +40,29 @@
     </div>
   </div>
 
-  <div class="value-props">
+  <div id="value-props">
     <div style="background-image: url(<%= @marketing_content.background_photo_1 %>)">
-      <div class="prop">
-        <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-play-457923eaae6627b6df2b2a46b5ac0b5d70bb4bb1f48b9dd711fda8b8fb2f0022.svg" width="50" />
-        <h3><%= @marketing_content.feature_title_1 %></h3>
-        <p><%= @marketing_content.feature_content_1 %></p>
-      </div>
-      <div class="prop">
-        <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-pens-e003a0513504c20172216449e2c8141934cd8c6e93d527a498ab54d1c9821b6d.svg" width="50" />
-        <h3><%= @marketing_content.feature_title_2 %></h3>
-        <p><%= @marketing_content.feature_content_2 %></p>
-      </div>
-      <div class="prop">
-        <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-door-dafb2e9872a48684f7ced3975a8473132694ae1366cfad35fbbcdf9039301473.svg" width="50" />
-        <h3><%= @marketing_content.feature_title_2 %></h3>
-        <p><%= @marketing_content.feature_content_2 %></p>
+      <div>
+        <div class="prop">
+          <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-play-457923eaae6627b6df2b2a46b5ac0b5d70bb4bb1f48b9dd711fda8b8fb2f0022.svg"/>
+          <h3><%= @marketing_content.feature_title_1 %></h3>
+          <p><%= @marketing_content.feature_content_1 %></p>
+        </div>
+        <div id="prop-center" class="prop">
+          <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-pens-e003a0513504c20172216449e2c8141934cd8c6e93d527a498ab54d1c9821b6d.svg"/>
+          <h3><%= @marketing_content.feature_title_2 %></h3>
+          <p><%= @marketing_content.feature_content_2 %></p>
+        </div>
+        <div class="prop">
+          <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/cm/icon-door-dafb2e9872a48684f7ced3975a8473132694ae1366cfad35fbbcdf9039301473.svg"/>
+          <h3><%= @marketing_content.feature_title_3 %></h3>
+          <p><%= @marketing_content.feature_content_3 %></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="lesson-plan">
+  <div id="lesson-plan">
     <% if @course.status == "active" %>
       <h1>LESSON PLAN</h1>
       <% @lessons.each do |l| %>
@@ -77,7 +79,7 @@
     <% end %>
   </div>
 
-  <div class="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
+  <div id="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
     <div class="recommendations">
       <% @recommendations.each do |rec| %>
         <div class="rec">
