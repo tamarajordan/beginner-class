@@ -2,8 +2,123 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$light-gray-text: rgba(255,255,255,0.5);
+
 button {
-    background-color: #be3f3f; /* Green */
+    background-color: #be3f3f;
+    font-family: "Raleway", "Helvetica", sans-serif;
+    border: none;
+    color: white;
+    letter-spacing: 2px;
+    margin: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2.5px;
+}
+
+#headline {
+	padding-bottom: 32px;
+	padding-top: 475px;
+	text-align: center;
+	>div {
+		display: inline-block;
+		>h1 {
+			font-size: 50px;
+			font-weight: bold;
+			letter-spacing: 2.2px;
+		}
+		>h2 {
+			font-size: 34px;
+			font-weight: lighter;
+			letter-spacing: 1.5px;
+			color: $light-gray-text;
+		}
+	}
+}
+
+.triplet {
+	padding: 0 50px;
+	text-align: center;
+	font-size: 0;
+	>div {
+		font-size: initial;
+		display: inline-block;
+		width: 33%;
+		padding: 20px;
+		padding-bottom: 50px;
+		vertical-align: top;
+		&.center-triplet {
+			border-left: 1px solid rgba(255,255,255,0.2);
+			border-right: 1px solid rgba(255,255,255,0.2);	
+		}
+		>img {
+			width: 100px;
+		}
+		>h2 {
+			font-size: 1.5em;
+			letter-spacing: 1px;
+			padding-top: 20px;
+			padding-bottom: 12px;
+		}
+		>p {
+			font-size: 0.9em;
+			line-height: 1.5em;
+			color: $light-gray-text;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+#description {
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: 0;
+	>div {
+		width: 100%;
+		background-color: white;
+		#description-text {
+			font-size: initial;
+			display: inline-block;
+			padding: 48px 64px 48px 64px;
+			width: 64.5%;
+			vertical-align: top;
+			h1 {
+				font-size: 3em;
+				padding-bottom: 0.3em;
+				color: #4D5768;
+			}
+			p {
+				font-size: 1.25em;
+				line-height: 1.7;
+				color: rgba(77,87,104,0.6);
+			}
+		}
+		#description-photo {
+			display: inline-block;
+			height: 328px;
+			width: 35.5%;
+			text-align: right;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+	}	
+}
+
+
+
+
+
+/*
+
+button {
+    background-color: #be3f3f;
     font-family: "Raleway", "Helvetica", sans-serif;
     border: none;
     color: white;
@@ -17,7 +132,7 @@ button {
 }
 
 .headline {
-	width: 1200px;
+	width: 100%;
 	height: 530px;
 	position: relative;
 }
@@ -27,19 +142,17 @@ button {
 	position: absolute;	
 	bottom: 5px;
 	left: 33%;
-}
-
-.instructor-info h1 {
-	font-size: 50px;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
-
-.instructor-info h2 {
-	font-weight: 300;
+	h1 {
+		font-size: 50px;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+	h2 {
+	font-weight: 500;
 	color: rgba(255,255,255,0.5);
 	letter-spacing: 1.5px;
 	font-size: 35px;
+	}
 }
 
 .intro div {
@@ -72,18 +185,6 @@ button {
 	float: right;
 }
 
-/*
-.recommendations {
-	background-color: white;
-	color: gray;
-	display: inline-block;
-	box-sizing: border-box;
-}
-
-.recommender {
-	float: right;
-}
-*/
 
 .value-props div {
 	display: inline-block;
@@ -96,4 +197,4 @@ button {
 }
 
 .prop img {
-}
+}*/
