@@ -5,20 +5,6 @@
 $light-gray-text: rgba(255,255,255,0.5);
 $white-background-text: rgba(77,87,104,0.6);
 
-button {
-    background-color: #be3f3f;
-    font-family: "Raleway", "Helvetica", sans-serif;
-    border: none;
-    color: white;
-    letter-spacing: 2px;
-    margin: 10px;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 2.5px;
-}
 
 #headline {
 	padding-bottom: 32px;
@@ -53,7 +39,7 @@ button {
 		vertical-align: top;
 		&.center-triplet {
 			border-left: 1px solid rgba(255,255,255,0.2);
-			border-right: 1px solid rgba(255,255,255,0.2);	
+			border-right: 1px solid rgba(255,255,255,0.2);
 		}
 		>img {
 			width: 100px;
@@ -133,6 +119,7 @@ button {
 			width: calc(33.3% - 33.3px);
 			padding: 32px 32px 32px 32px;
 			vertical-align: top;
+			height: 309px;
 			img {
 				width: 80px;
 			}
@@ -152,7 +139,238 @@ button {
 	}
 }
 
+#lesson-container {
+	text-align: center;
+	padding-left: 120px;
+	padding-right: 120px;
+	>h1 {
+		font-size: 1.4em;
+		letter-spacing: 0.2em;
+		display: inline-block;
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+	>div {
+		display: inline-block;
+		background-color: white;
+		color: $white-background-text;
+		font-size: 0;
+		border-bottom: 1px solid lightgray;
+		width: 100%;
+		>.lesson-number {
+			font-size: initial;
+			display: inline-block;
+			width: 12%;
+			padding-top: 35px;
+			text-align: center;
+			>h1 {
+				font-size: 3em;
+				font-family: "Lato", "Helvetica", sans-serif;
+				font-weight: lighter;
+				color: $white-background-text;
+			}
+		}
+		>.lesson-name-desc {
+			font-size: initial;
+			display: inline-block;
+			width: 88%;
+			text-align: left;
+			padding-top: 35px;
+			vertical-align: top;
+			padding-left: 5px;
+			padding-right: 35px;
+			padding-bottom: 35px;
+			>h2 {
+				font-size: 1.5em;
+				color: #4d5768;
+				bottom-margin: 5px;
+				vertical-align: top;
+			}
+			>p {
+				display: inline-block;
+				padding-top: 0.5em;
+				line-height: 1.2;
+			}
+		}
+	}
+}
 
+
+#testimonials {
+	height: 800px;
+	background-size: cover;
+	background-position: -250px 100px;
+	background-repeat: no-repeat;
+	position: relative;
+
+	>div {
+		padding-top: 160px;
+		padding-left: 120px;
+		padding-right: 120px;
+		#recommendations {
+			background-color: white;
+			color: $white-background-text;
+			font-size: 0;
+			.rec-content {
+				display: inline-block;
+				font-size: initial;
+				vertical-align: top;
+				width: 65%;
+				padding-left: 60px;
+				padding-top: 64px;
+				
+				blockquote{
+					display:block;
+					color: gray;
+					position: relative;
+				  
+				  /*Font*/
+					font-size: 2.2em;
+					font-family: "Raleway", "Helvetica", sans-serif;
+					color: #4D5768;
+					line-height: 1.5;
+					padding-left: 45px;
+					padding-right: 45px;
+					text-align: justify;
+				}
+
+				blockquote:before {
+				  color: #ccc;
+				  font-family: "Times New Roman", serif;
+				  content: "\201C";
+				  font-size: 2em;
+				  position:absolute;
+				  left:5px;
+				  top: 0.3em;
+				  line-height: 0.1em;
+				}
+
+				blockquote:after
+				 {
+				  color: #ccc;
+				  font-family: "Times New Roman", serif;
+				  content: "\201D";
+				  font-size: 2em;
+				  position:absolute;
+				  right:3px;
+				  bottom: 0em;
+				  line-height: 0.1em;
+				}
+
+				blockquote p {
+					display: inline;
+
+				}
+				/* >h3 {
+
+				}
+				>h4 {
+					font-size: 3em;
+					font-family: 'Georgia', serif;
+					color: lightgray;
+					display: inline-block;
+				} */
+			}
+			.recommender {
+				font-size: initial;
+				display: inline-block;
+				width: 35%;
+				text-align: center;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				padding-left: 30px;
+				padding-right: 70px;
+				>h2 {
+					font-size: 1em;
+					color: #4d5768;
+					border-top: 1px solid lightgray;
+					padding-top: 20px;
+					padding-bottom: 10px;
+					font-family: "Helvetica Neue", "Helvetica", sans-serif;
+				}
+				>p {
+					font-size: 0.9em;
+					line-height: 1.4;
+					color: rgba(77,87,104,0.5);
+					padding-left: 10px;
+					padding-right: 10px;
+					letter-spacing: 1px;
+
+				}
+				>img {
+					border-radius: 50%;
+					width: 150px;
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	/* >.cover {
+		background-color: rgba(0,0,0,0.8);
+		opacity: 0.5;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	} */
+
+}
+
+/* #description {
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: 0;
+	>div {
+		width: 100%;
+		background-color: white;
+		#description-text {
+			font-size: initial;
+			display: inline-block;
+			padding: 48px 64px 48px 64px;
+			width: 64.5%;
+			vertical-align: top;
+			h1 {
+				font-size: 3em;
+				padding-bottom: 0.3em;
+				color: #4D5768;
+			}
+			p {
+				font-size: 1.25em;
+				line-height: 1.7;
+				color: $white-background-text;
+			}
+		}
+		#description-photo {
+			display: inline-block;
+			height: 328px;
+			width: 35.5%;
+			text-align: right;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+	}	
+}
+*/
+
+
+/*
+  <div id="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
+    <div class="recommendations">
+      <% @recommendations.each do |rec| %>
+        <div class="rec">
+          <h1><%= rec.content %></h1>
+          <div class="recommender">
+            <h2><%= rec.name %></h2>
+            <p><%= rec.description %></p>
+            <img src="<%= rec.photo %>" width="150" />
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+*/
 
 /*
 

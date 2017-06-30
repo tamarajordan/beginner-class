@@ -62,36 +62,67 @@
     </div>
   </div>
 
-  <div id="lesson-plan">
+<div>
     <% if @course.status == "active" %>
-      <h1>LESSON PLAN</h1>
-      <% @lessons.each do |l| %>
-        <div class="lesson">
-          <h1><%= l.number < 10 ? "0#{l.number}" : l.number %></h1>
-          <h2><%= l.name %></h2>
-          <p><%= l.description %></p>
-        </div>
-      <% end %>
+      <div id="lesson-container">
+        <h1>LESSON PLAN</h1>
+        <% @lessons.each do |l| %>
+          <div>
+            <div class="lesson-number">
+              <h1><%= l.number < 10 ? "0#{l.number}" : l.number %></h1>
+            </div>
+            <div class="lesson-name-desc">
+              <h2><%= l.name %></h2>
+              <p><%= l.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% else %>
       <h3>Want to know when the class goes live?</h3>
-      <form><input type="text" value="Your Email" />
-  </form> <button>JOIN THE WAITLIST</button>
+      <form><
+        input type="text" value="Your Email" />
+      </form>
+      <button>JOIN THE WAITLIST</button>
     <% end %>
-  </div>
+</div>
+
+<!-- Code below gives the view access to all recommendations for a  course:
 
   <div id="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
-    <div class="recommendations">
-      <% @recommendations.each do |rec| %>
-        <div class="rec">
-          <h1><%= rec.content %></h1>
-          <div class="recommender">
-            <h2><%= rec.name %></h2>
-            <p><%= rec.description %></p>
-            <img src="<%= rec.photo %>" width="150" />
-          </div>
-        </div>
-      <% end %>
+    <div>
+      <div id="recommendations">
+        <% @recommendations.each do |rec| %>
+            <div class="rec-content">
+              <blockquote>"<%= rec.content %>"</blockquote>
+            </div>
+            <div class="recommender">
+              <img src="<%= rec.photo %>" width="150" />
+              <h2><%= rec.name %></h2>
+              <p><%= rec.description %></p>
+            </div>
+        <% end %>
+      </div>
     </div>
+-->
+
+<!-- Showing only 1 recommendation to demonstrate what styling looks like -->
+  <div id="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
+    <div>
+      <div id="recommendations">
+        <div class="rec-content">
+          <blockquote><%= @recommendations.first.content %></blockquote>
+        </div>
+        <div class="recommender">
+          <img src="<%= @recommendations.first.photo %>" width="150" />
+          <h2><%= @recommendations.first.name %></h2>
+          <p><%= @recommendations.first.description %></p>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <div class="triplet">
       <div>
