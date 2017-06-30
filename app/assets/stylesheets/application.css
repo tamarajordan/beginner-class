@@ -84,15 +84,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', 'Helvetica', sans-serif;
 }
 
-footer {
-	position: relative;
-	align-self: center;
+#copyright {
+	color: darkgray;
+	opacity: 0.5;
+	padding-top: 30px;
 }
 
+
 button {
-    background-color: #be3f3f;
+    background-color: black;
     font-family: "Raleway", "Helvetica", sans-serif;
-    border: none;
+    border: 1px solid white;
     color: white;
     letter-spacing: 2px;
     margin: 10px;

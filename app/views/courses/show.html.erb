@@ -18,13 +18,13 @@
       <p><%= @marketing_content.intro_content_2 %></p>
     </div>
     <div>
-      <h1>$<%= @course.price/100%></h1><h3>LIFETIME ACCESS</h3>
+      <div><h1>$<%= @course.price/100%></h1><h3>LIFETIME ACCESS</h3></div>
       <% if @course.status == "active" %>
-        <button>TAKE THE CLASS</button><br />
+        <button id="take-class">TAKE THE CLASS</button><br />
       <% else %>
-        <button>PRE-ENROLL</button>
+        <button id="pre-enroll">PRE-ENROLL</button>
       <% end %>
-      <button>GIVE AS A GIFT</button><button>FAQ</button>
+      <button id="gift">GIVE AS A GIFT</button><button id="faq">FAQ</button>
     </div>
   </div>
 
@@ -79,11 +79,17 @@
         <% end %>
       </div>
     <% else %>
-      <h3>Want to know when the class goes live?</h3>
-      <form><
-        input type="text" value="Your Email" />
-      </form>
-      <button>JOIN THE WAITLIST</button>
+      <div id="waitlist-form">
+        <div>
+          <h3>Want to know when the class goes live?</h3>
+          <div id="form">
+            <form>
+             <input type="text" value="Your Email" />
+            </form>
+            <button>JOIN THE WAITLIST</button>
+          </div>
+        </div>
+      </div>
     <% end %>
 </div>
 
@@ -109,6 +115,7 @@
 <!-- Showing only 1 recommendation to demonstrate what styling looks like -->
   <div id="testimonials" style="background-image: url(<%= @marketing_content.background_photo_2 %>)" />
     <div>
+    <% if @course.status == "active" %>
       <div id="recommendations">
         <div class="rec-content">
           <blockquote><%= @recommendations.first.content %></blockquote>
@@ -119,9 +126,8 @@
           <p><%= @recommendations.first.description %></p>
         </div>
       </div>
+      <% end %>
     </div>
-
-
 
 
     <div class="triplet">
@@ -143,27 +149,38 @@
     </div>
   </div>
 
-  <div class="shares">
-    <h3>SHARE THIS CLASS</h3>
+  <div id="shares">
     <div>
-      <img src="https://www.seeklogo.net/wp-content/uploads/2016/11/twitter-icon-circle-blue-logo-preview.png" width="50" />
-    </div>
-    <div>
-      <img src="http://www.iconninja.com/files/119/402/387/facebook-circle-social-share-circular-media-icon.svg" width="50" />
-    </div>
-    <div>
-      <img src="http://unameitcs.com/wp-content/uploads/2013/08/blue-mail-icon-300x300.png" width="50" />
+      <h3>SHARE THIS CLASS</h3>
+      <div class="sharelink">
+        <img src="https://www.seeklogo.net/wp-content/uploads/2016/11/twitter-icon-circle-blue-logo-preview.png" width="50" />
+      </div>
+      <div id="middle-link" class="sharelink">
+        <img src="http://www.iconninja.com/files/119/402/387/facebook-circle-social-share-circular-media-icon.svg" width="50" />
+      </div>
+      <div class="sharelink">
+        <img src="http://unameitcs.com/wp-content/uploads/2013/08/blue-mail-icon-300x300.png" width="50" />
+      </div>
     </div>
   </div>
 
-  <div class="recommended-courses">
-    <% @recommended_courses.each do |course| %>
-      <div class="rec_course" style="background-image: url(<%= course.promo_photo %>)">
-        <h1><%= course.instructor.upcase %></h1>
-        <h2><%= course.name.upcase %></h2>
+  <div id="recommended-courses">
+    <div>
+      <h1>RECOMMENDED FOR YOU</h1>
+        <% @recommended_courses.each do |course| %>
+        <div>
+          <div class="rec_course" style="background-image: url(<%= course.promo_photo %>)">
+            <div class="class-info">
+              <h1><%= course.instructor.upcase %></h1>
+              <h2><%= course.name.upcase %></h2>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 <% else %>
   <h1><%= "#{@course.instructor} #{@course.name}" %> is not currently active or open for pre-enrollment.</h1>
 <% end %>
+
+
