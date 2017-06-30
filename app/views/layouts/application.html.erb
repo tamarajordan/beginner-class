@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= yield %>
+    <div class="footer">
+      <div class="logo">
+        <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/global/logo-203de089f5594e1d65e94a0eba995853982602cf0eff0b02d5edf1afd1646b07.svg" width="150" />
+      </div>
+
+      <div class="help">
+        <div>
+          <h2>LET'S BE FRIENDS</h2>
+          <p>MasterClass is on all your favorite social networks. Come say hello!</p>
+          <div class="share-imgs">
+            <img src="https://www.seeklogo.net/wp-content/uploads/2016/11/twitter-icon-circle-blue-logo-preview.png" width="50" />
+            <img src="http://www.iconninja.com/files/119/402/387/facebook-circle-social-share-circular-media-icon.svg" width="50" />
+            <img src="http://unameitcs.com/wp-content/uploads/2013/08/blue-mail-icon-300x300.png" width="50" />
+          </div>
+        </div>
+
+        <div>
+          <h2>SAFE & SOUND</h2>
+          <p>Your MasterClass purchase is secure. We never share your personal information.</p>
+          <img src="https://do6eyjibs3jse.cloudfront.net/assets/refresh/global/ssl-badgev2-328880646ecdefe24646eef7744bbf6eabbeed6dca18c043bd343a216e6420f9.svg" width="200" />
+        </div>
+
+        <div>
+          <h2>NEED HELP?</h2>
+          <p>We’re here to answer any questions you have about MasterClass or the classes we offer.</p>
+          <button>GET SUPPORT</button>
+        </div>
+      </div>
+
+      <div class="bottom-nav">
+        <div class="bottom-link">
+          <p><a href="" target="_blank">BROWSE CLASSES</a> |</p>
+        </div>
+
+        <div class="bottom-link">
+          <p><a href="" target="_blank">HELP CENTER</a> |</p>
+        </div>
+
+        <div class="bottom-link">
+          <p><a href="" target="_blank">CONTACT US</a> |</p>
+        </div>
+
+        <div class="bottom-link">
+          <p><a href="" target="_blank">PRIVACY</a> |</p>
+        </div>
+
+         <div class="bottom-link">
+          <p><a href="" target="_blank">TERMS</a> |</p>
+        </div>
+
+         <div class="bottom-link">
+          <p><a href="" target="_blank">CAREERS</a> |</p>
+        </div>
+      </div>
+
+      <div id="copyright">
+        <p>Copyright © 2017 MasterClass</p>
+      </div>
+    </div>
+  </body>
+</html>
