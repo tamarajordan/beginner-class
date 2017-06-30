@@ -9,7 +9,12 @@ To use:
 (More info: http://edgeguides.rubyonrails.org/active_record_migrations.html#resetting-the-database)
 
 3. To visit a course's page, start a server within your local clone by typing "rails s" within the local project folder. 
-Then, go to LocalHost3000/courses/:id within a browser window.
-For instance, to visit Christina Aguilera's course (id: 1), visit LocalHost3000/courses/1. To visit Herbie Hancock's upcoming course, visit LocalHost3000/courses/2
+Then, go to localhost:3000/courses/:id within a browser window.
+
+- For instance, to visit Christina Aguilera's course (id: 1), visit localhost:3000/courses/1
+
+- To visit Herbie Hancock's upcoming course, visit localhost:3000/courses/2
+
+- To visit Steve Martin's active course, visit localhost:3000/courses/3
 
 All courses have been seeded with the same marketing content as Christina Aguilera's course, for the sake of time.
